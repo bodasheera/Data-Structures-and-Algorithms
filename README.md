@@ -12,10 +12,7 @@
 #### Reference 
 - [X] [Binary Search and Binary Search Tree (video)](https://www.youtube.com/watch?v=D5SrAga1pno)
 
-
-
-
-
+<br><br>
 ## [Strivers SDE Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/)
 
 ### Arrays 
