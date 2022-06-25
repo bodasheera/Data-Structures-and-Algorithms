@@ -1,6 +1,3 @@
-
-# Self Taught Path to Software Development Engineer Role
-
 ## Data Structures and Algorithms
 
 ### Algorithmic complexity / Big-O / Asymptotic analysis
