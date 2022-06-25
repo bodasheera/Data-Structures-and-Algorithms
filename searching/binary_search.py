@@ -14,5 +14,5 @@ class Solution:
             elif (nums[mid] < target):
                 begin = mid + 1 
 
-        return -1
+        return -1                                                                              
 
