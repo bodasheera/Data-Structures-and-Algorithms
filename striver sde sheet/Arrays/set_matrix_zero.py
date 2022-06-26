@@ -89,12 +89,13 @@ APPROACH 4:
 """
 
 # Simple Approach
-    
+
+
+
+
 from array import array
 from typing import List
-
 from sqlalchemy import true
-
 class Solution1:
 
     index_matrix: array
@@ -108,7 +109,6 @@ class Solution1:
         else:
             return self.updated_matrix(matrix)
 
-
     def set_index_matrix(self, matrix):
         self.index_matrix = []
 
@@ -117,9 +117,8 @@ class Solution1:
                 if (val == 0):
                     self.index_matrix.append((i, j))
 
-
     def updated_matrix(self, matrix):
-        
+
         total_cols = len(matrix[0])
         total_rows = len(matrix)
 
@@ -143,45 +142,43 @@ class Solution1:
 class BruteForceSolution:
 
     def setZeroes(self, matrix: List[List[int]]) -> None:
-        for i , row in enumerate(matrix):
+        for i, row in enumerate(matrix):
             for j, val in enumerate(row):
 
                 if(val == 0):
-                    # row logic 
+                    # row logic
                     for col_index in range(len(matrix[0])):
                         if(matrix[i][col_index] != 0):
-                            matrix[i][col_index] = -100   
+                            matrix[i][col_index] = -100
 
-                    # col logic 
+                    # col logic
                     for row_index in range(len(matrix)):
-                        if(matrix[row_index][j]!= 0):
-                            matrix[row_index][j] = -100   
+                        if(matrix[row_index][j] != 0):
+                            matrix[row_index][j] = -100
 
-        for i , row in enumerate(matrix):
+        for i, row in enumerate(matrix):
             for j, val in enumerate(row):
                 if(val == -100):
                     matrix[i][j] = 0
 
-        print(matrix)
 
-        
 # Reduced time complexity O(m*n) and space complexity O(m + n)
 
 class Solution3:
 
     def setZeroes(self, matrix: List[List[int]]) -> None:
 
-        rows= set()
+        rows = set()
         cols = set()
 
-        for i , row in enumerate(matrix):
+        for i, row in enumerate(matrix):
             for j, val in enumerate(row):
 
                 if(val == 0):
                     rows.add(i)
                     cols.add(j)
 
-        for i , row in enumerate(matrix):
+        for i, row in enumerate(matrix):
             for j, val in enumerate(row):
 
                 if(i in rows or j in cols):
@@ -205,97 +202,10 @@ class Solution:
                 if matrix[i][j] == 0:
                     matrix[0][j] = matrix[i][0] = 0
 
-        for i in range(R-1,-1, -1):
-            for j in range(C-1,0,-1):
-                if (matrix[0][j] == 0 or  matrix[i][0] == 0):
+        for i in range(R-1, -1, -1):
+            for j in range(C-1, 0, -1):
+                if (matrix[0][j] == 0 or matrix[i][0] == 0):
                     matrix[i][j] = 0
 
             if col0 == 0:
                 matrix[i][0] = 0
-
-        print(matrix)
-
-        
-
-test = Solution()
-test.setZeroes([[0,1,2,0],[3,4,5,2],[1,3,1,5]])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-test = Solution()
-
-test.setZeroes([[1,1,1],[1,0,1],[1,1,1]])
-test.setZeroes([[0,1,2,0],[3,4,5,2],[1,3,1,5]])
