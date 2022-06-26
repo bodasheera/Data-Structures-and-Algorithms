@@ -15,7 +15,6 @@ Constraints:
     n == matrix[0].length
     1 <= m, n <= 200
     -2**31 <= matrix[i][j] <= (2**31) - 1
-
 """
 
 """ PSEUDO CODE SOLUTION
@@ -47,6 +46,46 @@ BRUTE FORCE:
 
     Space Complexity
         O(1) -> same matrix used 
+
+
+APPROACH 3:
+    Interviewer asks to reduce time complexity 
+
+    1. create 2 new arrays row = [] and col = []
+    2. loop through matrix
+    3. if val is zero then store 0 in indexes for row and col : row[i]=0 and col[j] = 0
+    4. loop through matrix again 
+    5. if row[i] == 0 or col[j] == 0 set matrix[i][j] = 0
+
+    or u can also use set instead of array and store indexes row.add(i) amd col.add(j)
+    directly instead of 0 in i and j position 
+
+    Time Complexity 
+        O( m*n )    
+
+    Space Complexity
+        O( m + n ) -> 2 new arrays / sets
+
+
+APPROACH 4:
+    Optimized approach of approach 3 where first row and first column will be used as indexes instead
+    of 2 new arrays
+
+    1. col0 = 1 (tracker for matrix[0][0] as 00 common for both col and row array )
+    2. loop through matrix 
+    3. if val = 0 then matrix[i][0] = 0 and matrix[0][j] = 0 updated respective index arrays to 0 
+    4. if val = 0 and j = 0 then col0 = 0 (because we cant make matrix[0][0] as 0 affects col and row)
+    5. traverse array bottom to up and right to left 
+    6. if matrix[i][0] = 0 or matrix[0][j] = 0 then matrix[i][j] = 0 
+    7. if col0 is 0 then matrix[i][0] = 0
+
+    Time Complexity 
+        O(m*n)    
+
+    Space Complexity
+        O(1)
+
+
 """
 
 # Simple Approach
@@ -54,7 +93,9 @@ BRUTE FORCE:
 from array import array
 from typing import List
 
-class Solution:
+from sqlalchemy import true
+
+class Solution1:
 
     index_matrix: array
 
@@ -96,25 +137,165 @@ class Solution:
 
         return matrix
 
-test = Solution()
-
-print(test.setZeroes([[1,1,1],[1,0,1],[1,1,1]]))
-print(test.setZeroes([[0,1,2,0],[3,4,5,2],[1,3,1,5]]))
-
-
 
 # Brute Force
 
-class Solution:
+class BruteForceSolution:
 
     def setZeroes(self, matrix: List[List[int]]) -> None:
-        
         for i , row in enumerate(matrix):
             for j, val in enumerate(row):
 
                 if(val == 0):
-                    pass 
-                
                     # row logic 
+                    for col_index in range(len(matrix[0])):
+                        if(matrix[i][col_index] != 0):
+                            matrix[i][col_index] = -100   
 
                     # col logic 
+                    for row_index in range(len(matrix)):
+                        if(matrix[row_index][j]!= 0):
+                            matrix[row_index][j] = -100   
+
+        for i , row in enumerate(matrix):
+            for j, val in enumerate(row):
+                if(val == -100):
+                    matrix[i][j] = 0
+
+        print(matrix)
+
+        
+# Reduced time complexity O(m*n) and space complexity O(m + n)
+
+class Solution3:
+
+    def setZeroes(self, matrix: List[List[int]]) -> None:
+
+        rows= set()
+        cols = set()
+
+        for i , row in enumerate(matrix):
+            for j, val in enumerate(row):
+
+                if(val == 0):
+                    rows.add(i)
+                    cols.add(j)
+
+        for i , row in enumerate(matrix):
+            for j, val in enumerate(row):
+
+                if(i in rows or j in cols):
+                    matrix[i][j] = 0
+
+
+# constant space complexity and O(mn) time complexity
+
+class Solution:
+
+    def setZeroes(self, matrix: List[List[int]]) -> None:
+
+        R = len(matrix)
+        C = len(matrix[0])
+        col0 = 1
+
+        for i in range(R):
+            if (matrix[i][0] == 0):
+                col0 = 0
+            for j in range(1, C):
+                if matrix[i][j] == 0:
+                    matrix[0][j] = matrix[i][0] = 0
+
+        for i in range(R-1,-1, -1):
+            for j in range(C-1,0,-1):
+                if (matrix[0][j] == 0 or  matrix[i][0] == 0):
+                    matrix[i][j] = 0
+
+            if col0 == 0:
+                matrix[i][0] = 0
+
+        print(matrix)
+
+        
+
+test = Solution()
+test.setZeroes([[0,1,2,0],[3,4,5,2],[1,3,1,5]])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+test = Solution()
+
+test.setZeroes([[1,1,1],[1,0,1],[1,1,1]])
+test.setZeroes([[0,1,2,0],[3,4,5,2],[1,3,1,5]])
