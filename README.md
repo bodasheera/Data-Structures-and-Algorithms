@@ -17,3 +17,5 @@
 
 ### Arrays 
 - [X] Set Matrix Zero
+- [ ] Pascal's Traingle
+
