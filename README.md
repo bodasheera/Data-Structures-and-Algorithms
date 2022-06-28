@@ -17,7 +17,7 @@
 
 ### Arrays 
 - [X] Set Matrix Zero
-- [ ] Pascal's Traingle
+- [X] Pascal's Traingle
 - [ ] Next Permutation
 - [ ] Kadane's Algorithm
 - [ ] Sort an array of 0's ,1's and 2's
