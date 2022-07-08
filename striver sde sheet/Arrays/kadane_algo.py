@@ -36,7 +36,7 @@ Time Complexity : O(N**2)
 Space Complexity : O(1)
 
 
-Approach 2 in O(n) time
+Approach 2 in O(n) time - Kadane Algo
 
 1. sum = 0, max = nums[0] first element
 2. traverse the array

@@ -20,5 +20,5 @@
 - [X] Pascal's Traingle
 - [x] Next Permutation
 - [x] Kadane's Algorithm
-- [ ] Sort an array of 0's ,1's and 2's
+- [x] Sort an array of 0's ,1's and 2's (Dutch National Flag Algo)
 - [ ] Stock Buy and Sell
