@@ -24,7 +24,7 @@
 - [x] Stock Buy and Sell
 
 ### Arrays Part-II
-- [ ] Rotate Matrix
+- [x] Rotate Matrix
 - [ ] Merge Overlapping Subintervals
 - [ ] Merge two sorted Arrays without extra space
 - [ ] Find the duplicate in an array of N+1 integers.
