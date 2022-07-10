@@ -7,12 +7,16 @@
 - [X] [Cheat sheet](http://bigocheatsheet.com/)
 
 
-### Searching Algorithms
+### Searching and Sorting Algorithms
 
 #### Reference 
 - [X] [Binary Search and Binary Search Tree (video)](https://www.youtube.com/watch?v=D5SrAga1pno)
+- [ ] [Bubble Sort (video)](https://www.youtube.com/watch?v=RT-hUXUWQ2I)
+- [ ] [Selection Sort (video)](https://www.youtube.com/watch?v=3hH8kTHFw2A)
+- [ ] [Insertion Sort (video)](https://www.youtube.com/watch?v=O0VbBkUvriI)
+- [ ] [Merge Sort (video)](https://www.youtube.com/watch?v=Ns7tGNbtvV4)
 
-<br><br>
+<br>
 ## [Strivers SDE Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/)
 
 ### Arrays 
