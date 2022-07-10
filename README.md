@@ -16,7 +16,7 @@
 - [ ] [Insertion Sort (video)](https://www.youtube.com/watch?v=O0VbBkUvriI)
 - [ ] [Merge Sort (video)](https://www.youtube.com/watch?v=Ns7tGNbtvV4)
 
-<br>
+
 ## [Strivers SDE Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/)
 
 ### Arrays 
