@@ -13,7 +13,7 @@
 - [X] [Binary Search and Binary Search Tree (video)](https://www.youtube.com/watch?v=D5SrAga1pno)
 - [X] [Bubble Sort (video)](https://www.youtube.com/watch?v=P00xJgWzz2c)
 - [ ] [Selection Sort (video)](https://www.youtube.com/watch?v=3hH8kTHFw2A)
-- [ ] [Insertion Sort (video)](https://www.youtube.com/watch?v=O0VbBkUvriI)
+- [x] [Insertion Sort (video)](https://www.youtube.com/watch?v=O0VbBkUvriI)
 - [ ] [Merge Sort (video)](https://www.youtube.com/watch?v=Ns7tGNbtvV4)
 
 
