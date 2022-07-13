@@ -50,7 +50,7 @@ class BruteForce:
         return profit
 
 
-class BruteForce:
+class Optimal:
     def maxProfit(self, prices: List[int]) -> int:
         min_price = (10**4) + 1
         profit = 0
