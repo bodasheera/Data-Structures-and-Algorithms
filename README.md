@@ -29,7 +29,7 @@
 
 ### Arrays Part-II
 - [x] Rotate Matrix
-- [ ] Merge Overlapping Subintervals
+- [x] Merge Overlapping Subintervals
 - [ ] Merge two sorted Arrays without extra space
 - [ ] Find the duplicate in an array of N+1 integers.
 - [ ] Repeat and Missing Number
