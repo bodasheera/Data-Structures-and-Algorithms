@@ -41,3 +41,4 @@
 
 ### Arrays and Hashing 
 - [X] Find Duplicate
+- [X] Valid Anagram
