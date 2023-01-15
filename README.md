@@ -42,3 +42,5 @@
 ### Arrays and Hashing 
 - [X] Find Duplicate
 - [X] Valid Anagram
+- [X] Two Sum
+- [X] Group Anagram
