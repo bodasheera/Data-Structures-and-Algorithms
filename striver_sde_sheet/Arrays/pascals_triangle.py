@@ -73,6 +73,7 @@ formula is SUM OF ALL prev * ((rowNum - i) / i)
 
 
 Time Complexity : O(N) -> looping for all elements 
+
 Space Complexity: O(N) -> store pascal row 
 
 """

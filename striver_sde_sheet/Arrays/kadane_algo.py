@@ -71,16 +71,18 @@ class BruteForce:
 class OptimalSolution:
 
     def maxSubArray(self, nums: List[int]) -> int:
-        sum = 0 ; max = nums[0] 
+        sum = 0 ; max = nums[0] ; start = 0; subarray = []
 
         for i in range(0, len(nums)):
             sum = sum + nums[i]
 
             if sum > max:
                 max = sum 
+                subarray = [start, i]
 
             if sum < 0:
-                sum = 0
+                sum = 0 
+                start = i + 1
 
         return max
 

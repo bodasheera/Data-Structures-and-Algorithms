@@ -34,3 +34,10 @@
 - [ ] Find the duplicate in an array of N+1 integers.
 - [ ] Repeat and Missing Number
 - [ ] Inversion of Array (Pre-req: Merge Sort)
+
+
+## [Neetcode](https://neetcode.io/practice)
+
+
+### Arrays and Hashing 
+- [X] Find Duplicate
